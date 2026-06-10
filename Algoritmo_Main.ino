@@ -20,7 +20,7 @@ float EEG_Diff = 0, EEG_Diff_Old = 0;
 float Leitura = 0;
 
 // LIMIARES ESTÁTICOS --------------------------------------------------------
-// Ajuste estes valores de acordo com a calibração do seu sinal
+// Ajustar estes valores de acordo com a calibração do sinal
 float LMax_Estatico = 500.0; 
 float LMin_Estatico = 100.0; 
 
@@ -346,11 +346,9 @@ void loop()
     Serial.print(LMin_Estatico);
     Serial.print(",");
 
-    // Removida a soma com a média adaptativa, plotando a derivada diretamente
     Serial.print(EEG_Diff); 
     Serial.print(",");
 
-    // A flagUltra agora multiplicada e sem a adição da média basal
     Serial.println(flagUltra * 1000); 
 
     // MOTOR -----------------------------------------------------------------
